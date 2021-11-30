@@ -128,7 +128,7 @@ def inject_dependencies():
     from bentoml.configuration.containers import BentoMLContainer, BentoMLConfiguration
 
     config_file = get_local_config_file()
-    if config_file and config_file.endswith(".yml"):
+    if config_file:
         configuration = BentoMLConfiguration(override_config_file=config_file)
     else:
         configuration = BentoMLConfiguration()
